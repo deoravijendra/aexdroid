@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html dir="ltr">
+  <!-- Saved from https://www.aexdroid.com -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encrypt Code</title>
+<style>
+#outer-wrapper{margin:0 auto;text-align:left;float:none;background-position:center!important}
+#post-wrapper{width:100%;max-width:100%;margin:0 auto;text-align:left;float:none;background-position:center!important}
+.post-body,.post{background-position:center!important}
+h2.post-title a,h1.post-title a,h2.post-title,h1.post-title{display:none;margin-top:0;margin:0}
+#blog1,#artikel,.blog-posts{background-position:center!important}
+.breadcrumbs{display:none;margin-top:0;margin:0}
+#comments,#breadcrumb,#sidebar-wrapper,#menu-wrap{display:none;margin-top:0;margin:0}
+.post-inner{padding:0 0 0 0;margin:20px auto}
+.post-body ul#wrapin{display:block;position:relative;margin:30px auto 0 auto}
+.post-body ul#wrapin li{display:block;margin:0 auto;text-align:left}
+.post-body ul#wrapin br{display:none}
+.ribbon{position:relative;z-index:1;padding:1em 2em}
+.ribbon-tampilan{font-size:120%!important;text-transform:uppercase;width:60%;position:relative;background:#374760;color:#fff;text-align:center;padding:1em 2em;margin:2em auto 3em}
+.ribbon-tampilan:before,.ribbon-tampilan:after{content:"";position:absolute;display:block;bottom:-1em;border:1.5em solid #374760;z-index:-1}
+.ribbon-tampilan:before{left:-2em;border-right-width:1.5em;border-left-color:transparent}
+.ribbon-tampilan:after{right:-2em;border-left-width:1.5em;border-right-color:transparent}
+.ribbon-tampilan .ribbon-nama:before,.ribbon-tampilan .ribbon-nama:after{content:"";position:absolute;display:block;border-style:solid;border-color:#374760 transparent transparent transparent;bottom:-1em}
+.ribbon-tampilan .ribbon-nama:before{left:0;border-width:1em 0 0 1em}
+.ribbon-tampilan .ribbon-nama:after{right:0;border-width:1em 1em 0 0}
+input#button-on{color:#fff!important;height:50px;font-size:14px;font-weight:bold;background:#07ACEC;padding:15px 25px;border-radius:4px;border:none;outline:none;box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);cursor:pointer;transition:all .4s ease-in-out;text-transform:uppercase;margin-top:15px}
+input#button-on:hover{box-shadow:0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+#belakang{background:#ecf0f1;position:relative;display:block;clear:both;border-radius:5px;padding:20px;border:1px solid rgba(0,0,0,0.05)}
+.belakang-2{background:#ecf0f1;position:relative;display:block;clear:both;border-radius:5px;padding:20px;border:1px solid rgba(0,0,0,0.05)}
+textarea{width:94%;height:300px;margin:0 auto;display:block;background-color:#fff;padding:20px;font:normal 13px 'Courier New',Monospace;border:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05);border-radius:5px 5px 0 0;resize:none}
+.daerah-tombol-2{color:#fff;background:#374760;text-align:center;padding:20px 20px 40px 20px;margin:10px;border-radius:4px}
+.hasil{color:#fff;background:#374760;text-align:center;padding:20px 40px 20px;margin:20px;border-radius:4px}
+button{color:#fff!important;height:50px;font-size:14px;font-weight:bold;background:#07ACEC;padding:15px 25px;border-radius:4px;border:none;outline:none;box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);cursor:pointer;transition:all .4s ease-in-out;text-transform:uppercase;margin-top:15px}  
+    </style>  
+    </head>
+<center>
+<script type="text/javascript">
+    function doencrypt(theform) { 
+     if (theform.code.value == "") { 
+      alert("NO CODES FOR ENCRYPTION!"); 
+      return false; 
+     } else { 
+      enctext=encrypt(theform.code.value); 
+      codetocopy="<script type='text/javascript'>\n"; 
+      codetocopy+="//<![CDATA[\n"; 
+      codetocopy+="document.write(unescape('"+enctext+"'));\n"; 
+      codetocopy+="//]]>\n"; 
+      codetocopy+="</script\>"; 
+      theform.ecode.value=codetocopy; 
+     } 
+     return false; 
+    } 
+
+    function encrypt(tx) {
+     var codehex='';
+     var i;
+     for (i=0; i<tx.length; i++) {
+      codehex += '%'+hexfromdec(tx.charCodeAt(i))
+     }
+     return codehex;
+    }
+
+    function hexfromdec(num) { 
+     hex1 = Math.round(num/16 - .5); 
+     hex2 = num - hex1 * 16; 
+     return (""+getletter(hex1)+getletter(hex2)); 
+    } 
+
+    function getletter(num) { 
+     if (num < 10) { 
+      return num; 
+     } 
+     else { 
+      if (num == 10) { return "A" } 
+      if (num == 11) { return "B" } 
+      if (num == 12) { return "C" } 
+      if (num == 13) { return "D" } 
+      if (num == 14) { return "E" } 
+      if (num == 15) { return "F" } 
+     } 
+    }
+function code_check(){
+    var focuscheck=document.getElementById('txtarea');if(focuscheck.value.indexOf('Paste your code here...')>0)focuscheck.value='';} 
+function copyToClipboard() {
+    $("#txtarea").select();
+  document.execCommand("copy"); 
+} 
+    </script>
+<div id="belakang">
+<br />
+<div class="hasil">
+<span style="font-size: large;"><b> INPUT :</b></span>
+        </div>
+<form method="post" name="pageform" onsubmit="return doencrypt(this);">
+<textarea cols="30" id="areatxt" name="code" placeholder="Paste your HTML, JS, CSS, PHP, C+ code here..." rows="20"></textarea>
+
+    <br />
+<div class="hasil">
+<span style="font-size: large;"><b> RESULT :</b></span>
+    </div>
+<textarea cols="30" id="txtarea" name="ecode" readonly="yes" rows="20"></textarea>
+
+           <br />
+<div class="daerah-tombol-2">
+<input id="button-on" onclick="doencrypt(pageform);" type="button" value="ENCRYPT CODE" />
+<input id="button-on" type="reset" value="RESET" />
+<button id="txtarea" onclick="copyToClipboard();">COPY TO CLIPBOARD</button>
+            </div>
+    </form>         
+        </center>
+  </body>
+</html>
