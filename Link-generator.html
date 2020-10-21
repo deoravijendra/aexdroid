@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Google Drive Dropbox OneDrive Link Generator</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<style> 
+.body{}
+#linkpaste { min-width: 95%; font-family: Courier; font-size: .9em; background: #F7F7F7; margin: 1em auto; padding: 1em 1em 1em; border: 1px solid #DDD; } 
+#cde:focus{ border: 1px solid black; } 
+.instruc{ width: 100%; float: none;}
+.notes{ width: 98%; float: none;margin:30px 0px 30px 0px;color:#fff;background:#32A4D6;padding:5px 5px 30px 5px}
+.instruc h2, .notes h2{ font-size: 1.3em; border-bottom: 1px solid #ff7200; padding-bottom: .2em; margin-bottom: .3em;}
+.instruc ol, .notes ul{ margin-left: 20px;}
+.notes ul{margin:5px 20px 10px 5px}
+#cde { width: 100%; height: 25px; padding: 0 .2em; margin:1em auto; font-size: 1em; font-family: Helvatica, sans-serif; }
+label {font-family: Georgia;font-size: 1.5em;}
+.block{ padding-top: 1em; margin-bottom: 1em;text-align:center}
+#but{ border-radius:8px; background: #32A4D6; color: #fff; font-family: Helvatica, Arial, Tahoma, sans-serif; font-size: 1.2em; padding: 5px 5px; cursor:pointer; margin: 0em auto 1em; display: block; min-width: 30%; clear: both;}
+iframe { margin:0em auto 1em; display: block; position:relative; max-width: 100%; }
+/* CSS3 ordered list Rectangle style by www.bloggerspice.com */
+ol {counter-reset:li;list-style: none;font:15px;
+padding:0;margin-bottom:4em;margin-left:2.5em;text-shadow: 0 1px 0 rgba(255,255,255,.5);}
+ol ol {margin: 0 0 0 2em;}
+ ol li{position:relative;display:block;padding:.4em .4em .4em .8em;
+margin:.5em 0 .5em 2em;background:#F5F5F5;color:#666;text-decoration:none;
+transition:all .3s ease-out;}
+ol li:hover{background:#EEEEEE;}
+ol li:before{content:counter(li);counter-increment:li;position:absolute;
+left:-2.5em;top:50%;margin-top:-1em;background:#FA8072;color:#FEFEFE;height:2em;width:2em;
+line-height:2em;text-align:center;font-weight:bold;}
+ol li:after{position:absolute; content:&#39;&#39;;border: .5em solid transparent;
+left:-1em;top:50%;margin-top:-.5em;transition:all .3s ease-out;}
+ol li:hover:after{left:-.5em;border-left-color:#FA8072;}
+ol li span{position:relative;display:block;padding:5px 8px;margin-bottom:10px;background:#fafafa;color:#666;text-decoration:none;transition:all .3s ease-out;}
+ol li span:hover{background:#f9f9f9;}
+kbd{font-size:80%;border:1px solid #999;padding:2px 5px;border-bottom-width:2px}
+</style>
+</head>
+<body>
+<div class="block">
+<label for="cde">Enter Share link:</label> <input id="cde" onkeydown="if (event.keyCode == 13) $('but').click()" placeholder="e.g., https://drive.google.com/file/d/0B0k76GMavVymS2RPY3RGTzgwVzg/view?usp=sharing" type="text" /><br />
+<button id="but">Generate</button> <label for="linkpaste">Direct Download link:</label> <input id="linkpaste" readonly="" type="text" /></div>
+<div class="instruc">
+<h2>
+How to create direct links with this tool?</h2>
+<ol>
+<li>First you must obtain the share URL.</li>
+<li>Here is the <a href="https://www.bloggerbyte.net/2019/12/direct-link-generator.html" target="_blank">Guide to obtain Share link</a>.</li>
+<li>Paste that link in the <kbd>'Enter Share link'</kbd> textbox.</li>
+<li>Then, press <kbd>Enter</kbd> or click Generate.</li>
+<li>Press <kbd>Ctrl + C</kbd> to copy the direct link to your clipboard.</li>
+</ol>
+</div>
+<div class="notes">
+<h2>
+Important notes</h2>
+<ul>
+<li>You can save this page by pressing <kbd>Ctrl + S</kbd> and use it whenever you need.</li>
+<li>This tool will work only for Google Drive, Dropbox and Onedrive links only.</li>
+</ul>
+</div>
+<div style="clear: both;">
+</div>
+<div id="frameContainer">
+</div>
+<script src="https://cdn.rawgit.com/wanwakek/js/d9bd2c2d/download.js" type="text/Javascript"></script>
+<!--<script src="https://cdn.rawgit.com/vicke4/Blogger/master/download.js" type="text/Javascript"></script>-->
+<!--<script src="https://googledrive.com/host/0B0k76GMavVymS3NidkN4Q0RwRFk" type="text/Javascript"></script>-->
+<!--<script src="https://syncwithtech.googlecode.com/svn/trunk/download.js" type="text/Javascript"></script>-->
+<div style='clear: both;'>
+</div>
+</body>
+</html>
